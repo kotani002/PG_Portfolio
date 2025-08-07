@@ -13,6 +13,8 @@ a {
 html,
 body,
 .content {
+    width: auto;
+    height: auto;
     justify-content: center;
     align-items: center;
     scroll-behavior: smooth;
@@ -21,7 +23,7 @@ body,
 
 /*ここでボディのboxの大きさを決める*/
 .body__wrapper {
-    width: 100%;
+    width: auto;
     height: auto;
     /*ヘッダーの大きさ分下げる*/
     padding-top: 100px;
@@ -93,7 +95,7 @@ body,
 .yellow-window {
     height: auto;
     width: auto;
-    min-width: 400px;
+    min-width: 90%;
     margin-bottom: 3rem;
     background: linear-gradient(hsl(56, 100%, 66%), #f1e30f);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
