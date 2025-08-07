@@ -53,19 +53,34 @@
                     <h1>Works</h1>
                 </div>
                 <div class="box-description">
-                    <div class="event__card"><a href="./event.html">
-                            <img class="event-picture" src=".//image/sinseikai.png"alt="">
+                    <div class="event__card event__card1">
+                            <img class="event-picture" src=".//image/sinseikai.png" alt="">
                             <div class="event__card-text" id="event__card1">
                                 お寺・墓地の紹介ページの作成
                             </div>
-                        </a>
                     </div>
                     <div class="event__card"><a href="./event.html">
-                            <img class="event-picture" src=".//image/lp_demo.png"alt="">
+                            <img class="event-picture" src=".//image/lp_demo.png" alt="">
                             <div class="event__card-text" id="event__card1">
                                 紹介用デモランディングページの作成
                             </div>
                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--ボタンが押された時に表示されるモダル-->
+            <div class="container">
+                <div class="mask"></div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <p><h1>【お寺・墓地の紹介ページの作成】</h1></p>
+                        <img class="event-picture" src=".//image/sinseikai.png" alt="">
+                        <p>寺墓地.comのWebページの刷新を行わせていただきました。利用者が知りたい情報へすぐにアクセス出来ることを目標に、バナー形式で伝えたり情報を伝えたり表示される文字を大きする工夫を行いました。</p>
+                        <p>使用した技術</p>
+                        <div class="close-btn-container">
+                            <button class="close-btn">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,6 +113,32 @@
 <script>
     $('#header').load('header.html');
     $('#footer').load('footer.html');
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const modalBtn = document.querySelector('.event__card1');
+    const mask = document.querySelector('.mask');
+    const modal = document.querySelector('.modal');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    // モーダルを開く
+    modalBtn.addEventListener('click', () => {
+        mask.classList.add('appear');
+        modal.classList.add('appear');
+    });
+    
+    // マスクをクリックして閉じる
+    mask.addEventListener('click', () => {
+        mask.classList.remove('appear');
+        modal.classList.remove('appear');
+    });
+    
+    // 閉じるボタンをクリックして閉じる
+    closeBtn.addEventListener('click', () => {
+        mask.classList.remove('appear');
+        modal.classList.remove('appear');
+    });
+});
+
 </script>
 
 </html>

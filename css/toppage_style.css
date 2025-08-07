@@ -72,7 +72,7 @@ body,
 }
 
 .box-description{
-    display: flex;
+    display:flexbox;
     text-align: center;
     gap: 3em;
     margin: 5rem;
@@ -114,4 +114,94 @@ body,
     font-size: 1.3rem;
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+/*モダル用*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.mask.appear {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    max-width: 1000px;
+    width: 90%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal.appear {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.close-btn {
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #0056b3;
+    transform: translateY(-1px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .modal p {
+        font-size: 14px;
+    }
+    
+    .modal-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
 }
