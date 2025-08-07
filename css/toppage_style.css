@@ -27,7 +27,7 @@ body,
     height: auto;
     /*ヘッダーの大きさ分下げる*/
     padding-top: 100px;
-    background-image: url(..//image/bg.svg);
+    background-image: url(..//image/bg.png);
 }
 
 /*メインコンテンツを入れる枠*/
