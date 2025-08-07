@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1920.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #41d0f0;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: url(#_名称未設定グラデーション_28);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション_28" data-name="名称未設定グラデーション 28" x1="-210" y1="210.24" x2="1290" y2="1710.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2478bd"/>
+      <stop offset="1" stop-color="#245abd"/>
+    </linearGradient>
+  </defs>
+  <g id="_ソーシャルメディアストーリー_01_1080_x_1920_px" data-name="ソーシャルメディアストーリー 01 1080 x 1920 px">
+    <g id="_背景" data-name="背景">
+      <rect class="cls-2" x="0" y=".24" width="1080" height="1920"/>
+    </g>
+    <g id="_グラフィック要素_奥_" data-name="グラフィック要素 (奥)">
+      <line class="cls-1" x1="994.39" y1=".5" x2="994.39" y2="1920.24"/>
+      <line class="cls-1" x1="881.59" y1=".5" x2="881.59" y2="1920.24"/>
+      <line class="cls-1" x1="768.78" y1=".5" x2="768.78" y2="1920.24"/>
+      <line class="cls-1" x1="655.98" y1=".5" x2="655.98" y2="1920.24"/>
+      <line class="cls-1" x1="543.18" y1=".5" x2="543.18" y2="1920.24"/>
+      <line class="cls-1" x1="430.38" y1=".5" x2="430.38" y2="1920.24"/>
+      <line class="cls-1" x1="317.58" y1=".5" x2="317.58" y2="1920.24"/>
+      <line class="cls-1" x1="204.78" y1=".5" x2="204.78" y2="1920.24"/>
+      <line class="cls-1" x1="91.98" y1=".5" x2="91.98" y2="1920.24"/>
+      <line class="cls-1" x1="0" y1="227.16" x2="1080" y2="227.16"/>
+      <line class="cls-1" x1="0" y1="339.96" x2="1080" y2="339.96"/>
+      <line class="cls-1" x1="0" y1="452.76" x2="1080" y2="452.76"/>
+      <line class="cls-1" x1="0" y1="565.56" x2="1080" y2="565.56"/>
+      <line class="cls-1" x1="0" y1="678.37" x2="1080" y2="678.37"/>
+      <line class="cls-1" x1="0" y1="791.17" x2="1080" y2="791.17"/>
+      <line class="cls-1" x1="0" y1="903.97" x2="1080" y2="903.97"/>
+      <line class="cls-1" x1="0" y1="1016.77" x2="1080" y2="1016.77"/>
+      <line class="cls-1" x1="0" y1="1129.57" x2="1080" y2="1129.57"/>
+      <line class="cls-1" x1="0" y1="1242.37" x2="1080" y2="1242.37"/>
+      <line class="cls-1" x1="0" y1="1355.17" x2="1080" y2="1355.17"/>
+      <line class="cls-1" x1="0" y1="1467.98" x2="1080" y2="1467.98"/>
+      <line class="cls-1" x1="0" y1="1580.78" x2="1080" y2="1580.78"/>
+      <line class="cls-1" x1="0" y1="114.36" x2="1080" y2="114.36"/>
+      <line class="cls-1" x1="0" y1="1693.58" x2="1080" y2="1693.58"/>
+      <line class="cls-1" x1="0" y1="1806.38" x2="1080" y2="1806.38"/>
+      <line class="cls-1" x1="0" y1=".5" x2="1080" y2=".5"/>
+    </g>
+  </g>
+</svg>
