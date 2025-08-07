@@ -42,10 +42,6 @@ body,
     height: auto;
 }
 
-.box-description {
-    display: flex;
-}
-
 .event__cardlist {
     display: flex;
     flex-wrap: wrap;
@@ -72,7 +68,7 @@ body,
 }
 
 .box-description{
-    display:flexbox;
+    display:flex;
     text-align: center;
     gap: 3em;
     margin: 5rem;
@@ -91,7 +87,7 @@ body,
 }
 
 .yellow-window {
-    height: 100%;
+    height: auto;
     width: auto;
     margin: 2em;
     background: linear-gradient(hsl(56, 100%, 66%), #f1e30f);
