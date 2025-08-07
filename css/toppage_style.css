@@ -52,16 +52,13 @@ body,
 }
 
 .event__card {
-    width: 45%;
     height: auto;
-    margin-bottom: 3%;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
     text-decoration: none;
-
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .event__card:hover {
@@ -71,6 +68,9 @@ body,
 .box-description {
     display: flex;
     text-align: center;
+    margin: 5%;
+    flex-flow: column;
+    margin: 0 auto;
 }
 
 .event-picture {
@@ -85,9 +85,15 @@ body,
     color: #000000;
 }
 
+.work-window .box-description
+{
+    gap: 5%;
+}
+
 .yellow-window {
     height: auto;
     width: auto;
+    min-width: 400px;
     margin-bottom: 3rem;
     background: linear-gradient(hsl(56, 100%, 66%), #f1e30f);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
@@ -214,11 +220,5 @@ body,
     .modal-button {
         font-size: 14px;
         padding: 10px 20px;
-    }
-
-    .work-window .box-description {
-        display: flex;
-        flex-flow: column;
-        margin: 0 auto;
     }
 }
