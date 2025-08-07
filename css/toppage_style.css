@@ -15,6 +15,7 @@ body,
 .content {
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, Meiryo, sans-serif;
 }
 
@@ -63,19 +64,17 @@ body,
     transition: transform 0.3s ease;
 }
 
-.event__card:hover{
+.event__card:hover {
     transform: scale(1.1);
 }
 
-.box-description{
-    display:flex;
+.box-description {
+    display: flex;
     text-align: center;
-    gap: 3em;
-    margin: 5rem;
 }
 
-.event-picture{
-    width:350px;
+.event-picture {
+    width: 350px;
     height: auto;
 }
 
@@ -89,7 +88,7 @@ body,
 .yellow-window {
     height: auto;
     width: auto;
-    margin: 2em;
+    margin-bottom: 3rem;
     background: linear-gradient(hsl(56, 100%, 66%), #f1e30f);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
     border: 5px solid #333333;
@@ -191,13 +190,35 @@ body,
         width: 95%;
         padding: 20px;
     }
-    
+
     .modal p {
         font-size: 14px;
     }
-    
+
     .modal-button {
         font-size: 14px;
         padding: 10px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .modal {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal p {
+        font-size: 14px;
+    }
+
+    .modal-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .work-window .box-description {
+        display: flex;
+        flex-flow: column;
+        margin: 0 auto;
     }
 }
