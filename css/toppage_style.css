@@ -195,7 +195,7 @@ body,
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .modal {
-        width: 95%;
+        width: 90%;
         padding: 20px;
     }
 
@@ -211,7 +211,7 @@ body,
 
 @media (max-width: 900px) {
     .modal {
-        width: 95%;
+        width: 90%;
         padding: 20px;
     }
 
