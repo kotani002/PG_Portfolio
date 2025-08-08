@@ -30,6 +30,13 @@ body,
     background-image: url(..//image/bg.png);
 }
 
+@media (max-width: 768px) {
+
+    .body__wrapper {
+        padding-top: 200px;
+    }
+}
+
 /*メインコンテンツを入れる枠*/
 .main__contents__wrapper {
     width: auto;
@@ -87,8 +94,7 @@ body,
     color: #000000;
 }
 
-.work-window .box-description
-{
+.work-window .box-description {
     gap: 5%;
 }
 
