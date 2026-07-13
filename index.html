@@ -1,182 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="portfolio">
-    <!--ライブラリ（jQuery）を読み込んで使う-->
-    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="./js/jquery.layerBoard.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山田 太郎 | Game Developer Portfolio</title>
+<meta name="description" content="ゲームプログラマー 山田太郎のポートフォリオサイト。制作実績・経歴・スキルを掲載。">
 
-    <!--共通パーツの読み込み-->
-    <link rel="stylesheet" href="css/toppage_style.css">
-    <link rel="stylesheet" href="css/common_style.css">
-    <link rel="stylesheet" href="css/carousel_area_style.css">
-    <title>ポートフォリオ</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
-
-<!--ヘッダーの追加-->
-<div class="header" id="header"></div>
-
 <body>
-    <div class="body__wrapper">
-        <div class="main__contents__wrapper">
-            <!--トップページの内容-->
-            <!--見出しの追加-->
-            <div class="yellow-window">
-                <div class="box-title">
-                    <h1>About this site</h1>
-                </div>
-                <p>このサイトは小谷健人のポートフォリオサイトです。
-                    <br>これまでにかかわらせていただいたお仕事、自身のプロフィールなどをまとめています。
-                </p>
-            </div>
 
-            <p id="about_me"></p>
-            <div class="yellow-window">
-                <div class="box-title">
-                    <h1>About me</h1>
-                </div>
-                <p>
-                    <br>高校でプログラムの面白さを学び、専門学校ではUnityを使用したチームでのゲーム制作経験を積む。
-                    <br>2024年、小皇帝合同会社にプログラマーとして入社。
-                    <br>現在はジェネラリストを目指し、Webページ作成や専門学校でUnityの基礎講義などを行っています。
-                </p>
-            </div>
+<!-- ========================================
+   ヘッダー(固定ナビ)
+======================================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo" id="logoLink"><span id="logoMain">TARO</span><span id="logoSuffix">.DEV</span></a>
 
-            <p id="work"></p>
-            <div class="yellow-window work-window">
-                <div class="box-title">
-                    <h1>Works</h1>
-                </div>
-                <div class="box-description">
-                    <div class="event__card event__card1">
-                        <img class="event-picture" src=".//image/sinseikai.png" alt="">
-                        <div class="event__card-text" id="event__card1">
-                            お寺・墓地の紹介ページの作成
-                        </div>
-                    </div>
-                    <div class="event__card event__card2">
-                        <img class="event-picture" src=".//image/lp_demo.png" alt="">
-                        <div class="event__card-text" id="event__card1">
-                            ランディングページのデモページ作成
-                        </div>
-                    </div>
-                </div>
-                <p id="portfolio"></p>
-            </div>
+    <nav class="main-nav">
+      <a href="#about" data-nav>About</a>
+      <a href="#career" data-nav>Career</a>
+      <a href="#games" data-nav>Games</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
 
-            <!--ボタンが押された時に表示されるモダル-->
-            <div class="container">
-                <div class="mask"></div>
-                <div class="modal deramoti_modal">
-                    <div class="modal-content">
-                        <p>
-                        <h1>【お寺・墓地の紹介ページの作成】</h1>
-                        </p>
-                        <img class="event-picture" src=".//image/sinseikai.png" alt="">
-                        <p>寺墓地.comのWebページの刷新を行わせていただきました。<br>利用者が知りたい情報へすぐにアクセス出来ることを目標に、バナー形式で伝えたり情報を伝えたり表示される文字を大きする工夫を行いました。
-                        </p>
-                        <p>使用した技術など
-                            <br>HTML/CSS,jquery,Git,Docker,WinSCP,さくらサーバ
-                        </p>
-                        <div class="close-btn-container">
-                            <button class="close-btn close-btn1">Close</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal lp_demo_modal">
-                    <div class="modal-content">
-                        <p>
-                        <h1>【ランディングページのデモ作成】</h1>
-                        </p>
-                        <img class="event-picture" src=".//image/lp_demo.png" alt="">
-                        <p>自社制作のランディングページのデモを作成。
-                            <br>ランディングページを作る上で分かりやすい色と目につく色でデザインすることを意識。
-                            <br>ハンバーガーメニューやカルーセルエリアなどの動きが心地よくなるように実装ができたと思っています。
-                        </p>
-                        <p>使用した技術など
-                            <br>HTML/CSS,jquery,Git,,GitHubPage,Docker
-                        </p>
-                        <div class="close-btn-container">
-                            <button class="close-btn close-btn2">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="yellow-window yellow-window-profile">
-                <div class="box-title">
-                    <h1>Profile</h1>
-                </div>
-                <p>
-                <h2>2001年に8月に誕生</h2>
-                <br>絵本が好きな子供で近所の児童館に置いてあった<br>「おさるのジョージ」と「アンパンマン」シリーズを全て読破した。
-                <br>その時の将来の夢はアンパンマン。
-                <h2>高校で物作りの楽しさを知る</h2>
-                <br>2017年 工業高校に入学。<br>計画を立て、それを実行し、結果を出す、<br>物を作る楽しさを知る。
-                <h2>チーム制作の経験と必要性を知る</h2>
-                <br>2020年 専門高校に入学。<br>チームでの制作経験を体験する。<br>チームで大きな物を作り上げる大変さと、<br>チームでしか作れない物の価値を知る。
-                <h2>現在/h2>
-                現在所属している会社に拾ってもらい、
-                <br>現在はエンジニアとして働いています。
-                <br>自分の技術と時間で困っている誰かに解決策を提示できる人間になる事を目指しています。
-                </p>
-            </div>
-        </div>
-        <!--フッダーの追加-->
-        <div class="footer" id="footer"></div>
+    <div class="header-meta">
+      <span class="updated-badge">Last update: <time id="updated-date">2026.07</time></span>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ========================================
+     1. 自己紹介 & スキルシート
+  ======================================== -->
+  <section id="about" class="section about-section">
+    <div class="section-inner">
+
+      <p class="eyebrow">01 / Profile</p>
+
+      <div class="about-grid">
+        <div class="about-main">
+          <h1 class="hero-name" id="heroName">山田 太郎 <span class="hero-name-en" id="heroNameEn">Taro Yamada</span></h1>
+
+          <p class="hero-role">
+            希望職種: <strong id="heroRole">ゲームクライアントプログラマー</strong>
+            <span class="hero-role-en" id="heroRoleEn">/ Game Client Programmer</span>
+          </p>
+
+          <hr class="hero-rule">
+
+          <p class="hero-lead" id="heroLead">
+            Unity / C# を用いたゲーム開発を専門とするプログラマーです。個人開発で3タイトルをリリースし、
+            前職ではオンライン対戦ゲームのネットワーク実装を担当しました。
+            プレイヤーが「気持ちいい」と感じる操作感の作り込みが得意です。
+          </p>
+
+          <div class="hero-actions">
+            <a href="./assets/resume.pdf" class="btn btn-primary" id="resumeLink" download>
+              履歴書をダウンロード <span class="btn-sub">(PDF)</span>
+            </a>
+            <a href="./assets/career-sheet.pdf" class="btn btn-outline" id="careerSheetLink" download>
+              職務経歴書をダウンロード <span class="btn-sub">(PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-photo" aria-hidden="true">
+          <div class="photo-frame">
+            <span class="photo-placeholder-text">PHOTO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- スキルシート -->
+      <div class="skills-block">
+        <h2 class="block-title">スキルシート <span class="block-title-en">/ Skills</span></h2>
+
+        <div class="skill-groups">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">言語 / Languages</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">C#</span>
+                <span class="skill-bar"><span class="skill-bar-fill" style="width:90%"></span></span>
+                <span class="skill-detail">実務3年 / Unityでの開発経験多数</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">C++</span>
+                <span class="skill-bar"><span class="skill-bar-fill" style="width:55%"></span></span>
+                <span class="skill-detail">専門学校で一年生向け授業を行う</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-bar"><span class="skill-bar-fill" style="width:40%"></span></span>
+                <span class="skill-detail">ツール制作・Web連携で使用</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">エンジン・ツール / Engines &amp; Tools</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <span class="skill-name">Unity</span>
+                <span class="skill-bar"><span class="skill-bar-fill" style="width:90%"></span></span>
+                <span class="skill-detail">実務・個人開発ともにメイン環境</span>
+              </li>
+              <li class="skill-item">
+                <span class="skill-name">Git / GitHub</span>
+                <span class="skill-bar"><span class="skill-bar-fill" style="width:80%"></span></span>
+                <span class="skill-detail">チーム開発でのブランチ運用経験あり</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">得意領域 / Strengths</h3>
+            <ul class="tag-list">
+              <li>ゲームプレイプログラミング</li>
+              <li>ネットワーク同期実装</li>
+              <li>UI/UX実装</li>
+              <li>パフォーマンスチューニング</li>
+              <li>ツール内製化</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+     2. 経歴・職務経歴(タイムライン)
+  ======================================== -->
+  <section id="career" class="section career-section">
+    <div class="section-inner">
+      <p class="eyebrow">02 / Career</p>
+      <h2 class="block-title">経歴 <span class="block-title-en">/ Career Timeline</span></h2>
+
+      <ol class="timeline">
+
+        <li class="timeline-item">
+          <div class="timeline-marker" data-type="work"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <span class="timeline-period">2023.04 - 現在</span>
+              <span class="timeline-type-tag">職歴</span>
+            </div>
+            <h3 class="timeline-title">株式会社サンプルゲームズ / クライアントエンジニア</h3>
+            <details class="timeline-details">
+              <summary>詳細を見る</summary>
+              <p>
+                オンライン対戦アクションゲームのクライアント実装を担当。ロールバック方式のネットワーク同期処理を新規実装し、
+                対戦時のラグ体感を改善。5名チームでのスクラム開発を経験。
+              </p>
+              <ul class="tag-list small">
+                <li>Unity</li><li>C#</li><li>Photon</li><li>Scrum</li>
+              </ul>
+            </details>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" data-type="work"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <span class="timeline-period">2021.04 - 2023.03</span>
+              <span class="timeline-type-tag">職歴</span>
+            </div>
+            <h3 class="timeline-title">株式会社サンプルスタジオ / ゲームプログラマー(新卒)</h3>
+            <details class="timeline-details">
+              <summary>詳細を見る</summary>
+              <p>
+                スマートフォン向けパズルゲームの新規機能開発・保守を担当。ガチャ演出まわりのUI実装や、
+                データセーブ機構のリファクタリングを主導。
+              </p>
+              <ul class="tag-list small">
+                <li>Unity</li><li>C#</li><li>Firebase</li>
+              </ul>
+            </details>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-marker" data-type="edu"></div>
+          <div class="timeline-content">
+            <div class="timeline-head">
+              <span class="timeline-period">2017.04 - 2021.03</span>
+              <span class="timeline-type-tag edu">学歴</span>
+            </div>
+            <h3 class="timeline-title">サンプル工科大学 情報工学科</h3>
+            <details class="timeline-details">
+              <summary>詳細を見る</summary>
+              <p>
+                ゲームAIに関する研究室に所属し、卒業研究として強化学習を用いた対戦AIを制作。
+                学内ゲームジャムに3回参加し、最優秀賞を1回受賞。
+              </p>
+              <ul class="tag-list small">
+                <li>Python</li><li>強化学習</li><li>ゲームジャム入賞</li>
+              </ul>
+            </details>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========================================
+     3. 作ったゲーム一覧
+  ======================================== -->
+  <section id="games" class="section games-section">
+    <div class="section-inner">
+      <p class="eyebrow">03 / Works</p>
+      <h2 class="block-title">制作ゲーム一覧 <span class="block-title-en">/ Games</span></h2>
+      <p class="section-lead">カードをクリックすると詳細（担当範囲・使用技術・リンク）が確認できます。</p>
+
+      <div class="game-grid" id="gameGrid">
+        <!-- JSでカードを生成 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+     4. お問い合わせ・SNSリンク
+  ======================================== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner">
+      <p class="eyebrow">04 / Contact</p>
+      <h2 class="block-title">お問い合わせ <span class="block-title-en">/ Contact</span></h2>
+      <p class="section-lead">ご連絡は下記いずれかよりお気軽にどうぞ。</p>
+
+      <div class="contact-grid">
+
+        <a class="contact-card" id="contactEmail" href="mailto:example@example.com">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value" id="contactEmailValue">example@example.com</span>
+        </a>
+
+        <a class="contact-card" id="contactGithub" href="https://github.com/your_id" target="_blank" rel="noopener">
+          <span class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.55 9.55 0 015 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+          </span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value" id="contactGithubValue">github.com/your_id</span>
+        </a>
+      </div>
+
+      <div class="github-activity">
+        <p class="github-activity-label">GitHub Activity</p>
+        <!-- src は config.js の githubUsername から自動生成されます -->
+        <img class="github-stats-img" id="githubStatsImg" src="https://github-readme-stats.vercel.app/api?username=your_id&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" loading="lazy">
+      </div>
+
+      <footer class="site-footer">
+        <p id="footerLogo" aria-hidden="true"></p>
+        <p id="footerNote">&copy; 2026 Taro Yamada. Built with plain HTML/CSS/JS, hosted on GitHub Pages.</p>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<button id="backToTop" class="back-to-top" aria-label="トップへ戻る">
+  <span class="back-to-top-arrow" aria-hidden="true">&#8593;</span> Topへ戻る
+</button>
+
+<!-- ========================================
+   ゲーム詳細モーダル
+======================================== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="閉じる">&times;</button>
+
+    <div class="modal-image-wrap">
+      <img id="modalImage" src="" alt="">
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-tags" id="modalTechTags"></div>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <p id="modalDesc" class="modal-desc"></p>
+
+      <dl class="modal-meta">
+        <div><dt>担当範囲</dt><dd id="modalRole"></dd></div>
+        <div><dt>開発期間</dt><dd id="modalPeriod"></dd></div>
+        <div><dt>開発人数</dt><dd id="modalTeam"></dd></div>
+        <div><dt>プレイ形式</dt><dd id="modalPlayType"></dd></div>
+      </dl>
+
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
 </body>
-
-<!--挿入する共通クラスのロード-->
-<script>
-    $('#header').load('header.html');
-    $('#footer').load('footer.html');
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const modalBtn = document.querySelector('.event__card1');
-        const mask = document.querySelector('.mask');
-        const modal = document.querySelector('.deramoti_modal');
-        const closeBtn1 = document.querySelector('.close-btn1');
-
-        const modalBtn2 = document.querySelector('.event__card2');
-        const pl_demo_modal = document.querySelector('.lp_demo_modal');
-        const closeBtn2 = document.querySelector('.close-btn2');
-
-        // モーダルを開く
-        modalBtn.addEventListener('click', () => {
-            mask.classList.add('appear');
-            modal.classList.add('appear');
-        });
-
-        modalBtn2.addEventListener('click', () => {
-            mask.classList.add('appear');
-            pl_demo_modal.classList.add('appear');
-        });
-
-        // マスクをクリックして閉じる
-        mask.addEventListener('click', () => {
-            mask.classList.remove('appear');
-            modal.classList.remove('appear');
-            pl_demo_modal.classList.remove('appear');
-        });
-
-        // 閉じるボタンをクリックして閉じる
-        closeBtn1.addEventListener('click', () => {
-            mask.classList.remove('appear');
-            modal.classList.remove('appear');
-        });
-
-        closeBtn2.addEventListener('click', () => {
-            mask.classList.remove('appear');
-            pl_demo_modal.classList.remove('appear');
-        });
-    });
-
-</script>
-
 </html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="portfolio">
+    <!--ライブラリ（jQuery）を読み込んで使う-->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="./js/jquery.layerBoard.js"></script>
+
+    <!--共通パーツの読み込み-->
+    <link rel="stylesheet" href="css/toppage_style.css">
+    <link rel="stylesheet" href="css/common_style.css">
+    <link rel="stylesheet" href="css/carousel_area_style.css">
+    <title>ポートフォリオ</title>
+</head>
+
+<!--ヘッダーの追加-->
+<div class="header" id="header"></div>
+
+<body>
+    <div class="body__wrapper">
+        <div class="main__contents__wrapper">
+            <!--トップページの内容-->
+            <!--見出しの追加-->
+            <div class="yellow-window">
+                <div class="box-title">
+                    <h1>About this site</h1>
+                </div>
+                <p>このサイトは小谷健人のポートフォリオサイトです。
+                    <br>これまでにかかわらせていただいたお仕事、自身のプロフィールなどをまとめています。
+                </p>
+            </div>
+
+            <p id="about_me"></p>
+            <div class="yellow-window">
+                <div class="box-title">
+                    <h1>About me</h1>
+                </div>
+                <p>
+                    <br>高校でプログラムの面白さを学び、専門学校ではUnityを使用したチームでのゲーム制作経験を積む。
+                    <br>2024年、小皇帝合同会社にプログラマーとして入社。
+                    <br>現在はジェネラリストを目指し、Webページ作成や専門学校でUnityの基礎講義などを行っています。
+                </p>
+            </div>
+
+            <p id="work"></p>
+            <div class="yellow-window work-window">
+                <div class="box-title">
+                    <h1>Works</h1>
+                </div>
+                <div class="box-description">
+                    <div class="event__card event__card1">
+                        <img class="event-picture" src=".//image/sinseikai.png" alt="">
+                        <div class="event__card-text" id="event__card1">
+                            お寺・墓地の紹介ページの作成
+                        </div>
+                    </div>
+                    <div class="event__card event__card2">
+                        <img class="event-picture" src=".//image/lp_demo.png" alt="">
+                        <div class="event__card-text" id="event__card1">
+                            ランディングページのデモページ作成
+                        </div>
+                    </div>
+                </div>
+                <p id="portfolio"></p>
+            </div>
+
+            <!--ボタンが押された時に表示されるモダル-->
+            <div class="container">
+                <div class="mask"></div>
+                <div class="modal deramoti_modal">
+                    <div class="modal-content">
+                        <p>
+                        <h1>【お寺・墓地の紹介ページの作成】</h1>
+                        </p>
+                        <img class="event-picture" src=".//image/sinseikai.png" alt="">
+                        <p>寺墓地.comのWebページの刷新を行わせていただきました。<br>利用者が知りたい情報へすぐにアクセス出来ることを目標に、バナー形式で伝えたり情報を伝えたり表示される文字を大きする工夫を行いました。
+                        </p>
+                        <p>使用した技術など
+                            <br>HTML/CSS,jquery,Git,Docker,WinSCP,さくらサーバ
+                        </p>
+                        <div class="close-btn-container">
+                            <button class="close-btn close-btn1">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal lp_demo_modal">
+                    <div class="modal-content">
+                        <p>
+                        <h1>【ランディングページのデモ作成】</h1>
+                        </p>
+                        <img class="event-picture" src=".//image/lp_demo.png" alt="">
+                        <p>自社制作のランディングページのデモを作成。
+                            <br>ランディングページを作る上で分かりやすい色と目につく色でデザインすることを意識。
+                            <br>ハンバーガーメニューやカルーセルエリアなどの動きが心地よくなるように実装ができたと思っています。
+                        </p>
+                        <p>使用した技術など
+                            <br>HTML/CSS,jquery,Git,,GitHubPage,Docker
+                        </p>
+                        <div class="close-btn-container">
+                            <button class="close-btn close-btn2">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="yellow-window yellow-window-profile">
+                <div class="box-title">
+                    <h1>Profile</h1>
+                </div>
+                <p>
+                <h2>2001年に8月に誕生</h2>
+                <br>絵本が好きな子供で近所の児童館に置いてあった<br>「おさるのジョージ」と「アンパンマン」シリーズを全て読破した。
+                <br>その時の将来の夢はアンパンマン。
+                <h2>高校で物作りの楽しさを知る</h2>
+                <br>2017年 工業高校に入学。<br>計画を立て、それを実行し、結果を出す、<br>物を作る楽しさを知る。
+                <h2>チーム制作の経験と必要性を知る</h2>
+                <br>2020年 専門高校に入学。<br>チームでの制作経験を体験する。<br>チームで大きな物を作り上げる大変さと、<br>チームでしか作れない物の価値を知る。
+                <h2>現在/h2>
+                現在所属している会社に拾ってもらい、
+                <br>現在はエンジニアとして働いています。
+                <br>自分の技術と時間で困っている誰かに解決策を提示できる人間になる事を目指しています。
+                </p>
+            </div>
+        </div>
+        <!--フッダーの追加-->
+        <div class="footer" id="footer"></div>
+    </div>
+</body>
+
+<!--挿入する共通クラスのロード-->
+<script>
+    $('#header').load('header.html');
+    $('#footer').load('footer.html');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const modalBtn = document.querySelector('.event__card1');
+        const mask = document.querySelector('.mask');
+        const modal = document.querySelector('.deramoti_modal');
+        const closeBtn1 = document.querySelector('.close-btn1');
+
+        const modalBtn2 = document.querySelector('.event__card2');
+        const pl_demo_modal = document.querySelector('.lp_demo_modal');
+        const closeBtn2 = document.querySelector('.close-btn2');
+
+        // モーダルを開く
+        modalBtn.addEventListener('click', () => {
+            mask.classList.add('appear');
+            modal.classList.add('appear');
+        });
+
+        modalBtn2.addEventListener('click', () => {
+            mask.classList.add('appear');
+            pl_demo_modal.classList.add('appear');
+        });
+
+        // マスクをクリックして閉じる
+        mask.addEventListener('click', () => {
+            mask.classList.remove('appear');
+            modal.classList.remove('appear');
+            pl_demo_modal.classList.remove('appear');
+        });
+
+        // 閉じるボタンをクリックして閉じる
+        closeBtn1.addEventListener('click', () => {
+            mask.classList.remove('appear');
+            modal.classList.remove('appear');
+        });
+
+        closeBtn2.addEventListener('click', () => {
+            mask.classList.remove('appear');
+            pl_demo_modal.classList.remove('appear');
+        });
+    });
+
+</script>
+
+</html>
