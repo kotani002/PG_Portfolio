@@ -22,8 +22,10 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          prompt: |
-            このPRの差分をレビューしてください。
-            リポジトリ直下のCLAUDE.mdに記載された設計方針・レビュー観点に従い、
-            日本語でPRにレビューコメントを投稿してください。
+          # 汎用promptだけだとClaudeが「レビュー内容を考える」ところまでで止まり、
+          # 実際にPRへコメントを投稿するツール権限が無いため何も投稿されないことがある。
+          # 公式のcode-reviewプラグインを使うことで、投稿までを含めて確実に実行させる。
+          plugin_marketplaces: "https://github.com/anthropics/claude-code.git"
+          plugins: "code-review@claude-code-plugins"
+          prompt: "/code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}"
           claude_args: "--max-turns 10"
