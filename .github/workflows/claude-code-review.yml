@@ -1,0 +1,28 @@
+name: Claude Code Review
+
+# PRが作成された時・新しいコミットがpushされた時(synchronize)に自動でレビューを実行する。
+# 「@claudeとメンションしたときだけ動く」方式ではなく、無条件で毎回レビューが飛ぶ設定。
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write # レビューコメントを投稿するために必要
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            このPRの差分をレビューしてください。
+            リポジトリ直下のCLAUDE.mdに記載された設計方針・レビュー観点に従い、
+            日本語でPRにレビューコメントを投稿してください。
+          claude_args: "--max-turns 10"
