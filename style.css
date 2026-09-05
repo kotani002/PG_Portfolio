@@ -23,6 +23,32 @@
   --max-w: 1080px;
 }
 
+/* ------------------------------------------------------------
+   ダークモード: 同じ変数名を上書きするだけで全体に反映される
+------------------------------------------------------------ */
+[data-theme="dark"]{
+  --bg:           #16161a;
+  --bg-alt:       #1e1e24;
+  --ink:          #f2f1ec;
+  --ink-soft:     #b7b6bd;
+  --ink-faint:    #7e7d85;
+  --line:         #2e2e36;
+  --line-strong:  #f2f1ec;
+
+  --accent:       #f5d800;
+  --accent-ink:   #16161a;
+}
+
+body,
+.site-header,
+.btn,
+.contact-card,
+.game-card,
+.modal,
+.theme-toggle{
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 24px); }
 
@@ -142,6 +168,26 @@ hr{ border:none; height:1px; background: var(--line-strong); margin: 0; }
   color: var(--ink-faint);
   white-space: nowrap;
 }
+
+/* テーマ切り替えボタン */
+.theme-toggle{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: 36px; height:36px;
+  padding:0;
+  background: none;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  cursor:pointer;
+  flex-shrink:0;
+}
+.theme-toggle:hover{ background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.theme-toggle svg{ width:18px; height:18px; }
+.theme-toggle .icon-sun{ display:none; }
+.theme-toggle .icon-moon{ display:block; }
+[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
+[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
 
 .nav-toggle{
   display:none;
