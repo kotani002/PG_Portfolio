@@ -124,6 +124,33 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 
 /* ============================================================
+   ダークモード切り替え
+   テーマ自体の初回適用は <head> 内のインラインスクリプトが
+   ちらつき防止のため先に行っています。ここではボタンの
+   クリック動作と状態表示(aria-pressed)のみを扱います。
+============================================================ */
+const THEME_STORAGE_KEY = "portfolio-theme";
+const themeToggle = document.getElementById("themeToggle");
+
+function syncThemeButton(){
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+}
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", nextTheme);
+  try{
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+  }catch(e){
+    // localStorageが使えない環境(プライベートブラウズ等)では保存をスキップ
+  }
+  syncThemeButton();
+});
+
+syncThemeButton();
+
+/* ============================================================
    トップへ戻るボタン
 ============================================================ */
 const backToTop = document.getElementById("backToTop");
